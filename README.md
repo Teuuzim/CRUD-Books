@@ -1,20 +1,124 @@
 # API with Python and Flask
 
-# CRUD Books
+## CRUD Books
 
-## Objective 
+### Objective
 
 Create an API that provides a CRUD (Create, Read, Update, Delete) functionality for books.
 
+### Requirements
+
+- Python 3.12
+- Flask
+
+### Usage
+
+1. Run the application:
+   ```sh
+   python app.py
+   ```
+
 ## Endpoints
-* GET /books
-* GET /books/:id
-* POST /books
-* PUT /books/:id
-* DELETE /books/:id
 
+### GET /books
 
+- Description: Retrieve a list of all books.
+- Example Response:
 
+```json
+  {
+    "id": 1,
+    "title": "Lord of the Ring: The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien"
+  },
+  {
+    "id": 2,
+    "title": "Lord of the Ring: The Two Towers",
+    "author": "J.R.R. Tolkien"
+  },
+  {
+    "id": 3,
+    "title": "Lord of the Ring: The Return of the King",
+    "author": "J.R.R. Tolkien"
+  },
+```
+
+### GET /books/id
+
+- Description: Retrieve a book by its ID.
+- Example response:
+
+```json
+{
+  "id": 1,
+  "title": "Lord of the Ring: The Fellowship of the Ring",
+  "author": "J.R.R. Tolkien"
+}
+```
+
+### POST /books
+
+- Description: Add a new book.
+- Example request body:
+
+```json
+{
+  "id": 5,
+  "title": "Estas estórias",
+  "author": "João Guimarães Rosa"
+}
+```
+
+- Example response:
+
+```json
+{
+    "id": 1,
+    "title": "Lord of the Ring: The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien"
+  },
+  ...
+  {
+    "id": 5,
+    "title": "Estas estórias",
+    "author": "João Guimarães Rosa"
+  }
+```
+
+### PUT /books
+
+- Update a book by its ID
+- Example request body:
+
+```json
+{
+  "title": "The Fellowship of the Ring",
+  "author": "J.R.R. Tolkien"
+}
+```
+
+- Example response:
+
+```json
+{
+  "id": 1,
+  "title": "The Fellowship of the Ring",
+  "author": "J.R.R. Tolkien"
+}
+```
+### DELETE /books/
+- Delete a book by its ID
+- Example response:
+```json
+[
+  {
+    "id": 1,
+    "title": "Lord of the Ring: The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien"
+  },
+  ...
+]
+```
 ## 🤝 Colaborador
 
 <table>
